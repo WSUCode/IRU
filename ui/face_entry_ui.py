@@ -12,6 +12,7 @@ def face_entry():
     
     face_entry_window = tkinter.Toplevel()
     vid = VideoCapture()
+    vid.open_vidc()
     
     vid_canvas = tkinter.Canvas(
         face_entry_window, width = vid.width, 
@@ -41,7 +42,7 @@ def face_entry():
     select_image_btn.grid( column=3, row=6 )
 
     
-    _face_entry.update()
+    _face_entry.update_frame()
     
     face_entry_window.protocol(
         "WM_DELETE_WINDOW", 

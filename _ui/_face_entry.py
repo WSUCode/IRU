@@ -17,19 +17,19 @@ class VideoCapture:
 
     
     def open_vidc(self):
-        self.vid = cv2.VideoCapture( 
-            self.video_source)
+        self.vid = cv2.VideoCapture(  self.video_source)
 
         if not self.vid.isOpened():
             raise ValueError( \
                 _( "Unable to open video source") , 
-                video_source)
+                self.video_source)
 
         self.width = self.vid.get(cv2.CAP_PROP_FRAME_WIDTH)
         self.height = self.vid.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
     def get_frame(self):
-        if self.vid.isOpened():
+        
+        if not self.vid.isOpened():
             self.open_vidc()
 
         ret, self.frame = self.vid.read()
@@ -127,7 +127,7 @@ class FaceEntry:
             self.make_rect4face()
             self.place_image2tk()
 
-        self.window.after( self.delay, self.update )
+        self.window.after( self.delay, self.update_frame )
 
     def close_face_entry(self):
         self.stop_updating_frame = True
