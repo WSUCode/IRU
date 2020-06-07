@@ -6,6 +6,7 @@ import PIL.Image, PIL.ImageTk
 import time
 from setting import _
 from _ui._main import MainUI
+from unitils.init import init
 
 def main_ui():
     window = tkinter.Tk()

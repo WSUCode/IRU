@@ -11,6 +11,7 @@ class MainUI:
     def __init__(
         self,
         window: tkinter.Tk  ):
+
         self.faces_path = './data/iru.db'
         pass
 
