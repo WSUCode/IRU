@@ -1,6 +1,6 @@
 
 from pony import orm
-from iru import db
+from setting import db
 from pony.orm.core import Json, Optional, PrimaryKey, Required
 
 class IruPersonGender( Enum ):
@@ -18,3 +18,4 @@ class IruPerson( db.Entity ):
     schooling_length = Optional( int )
     face_encodings = Required( Json )
 
+db.generate_mapping(create_tables=True)

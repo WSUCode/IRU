@@ -4,12 +4,12 @@ import tkinter
 import cv2
 import PIL.Image, PIL.ImageTk
 import time
-from iru import _
+from setting import _
 from _ui._main import MainUI
 
 def main_ui():
     window = tkinter.Tk()
-    _main_ui = MainUI()
+    _main_ui = MainUI( window )
 
     window.title( _('I Recognize U') )
     window.resizable(0,0)

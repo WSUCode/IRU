@@ -4,7 +4,7 @@ import tkinter
 import cv2
 import PIL.Image, PIL.ImageTk
 import time
-from iru import _
+from setting import _
 from _ui._face_entry import FaceEntry, VideoCapture
 
 def iru_person_grid( window : tkinter.Tk ):
