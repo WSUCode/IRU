@@ -17,3 +17,4 @@ class IruPerson( db.Entity ):
     enrolling_date = Optional( str )
     schooling_length = Optional( int )
     face_encodings = Required( Json )
+

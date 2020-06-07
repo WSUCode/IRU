@@ -19,7 +19,5 @@ msgstr ""
 "X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: eduhub/apps.py:9 templates/eduhub/_eduhub_base.html:23
-#: templates/funhome/_navbar.html:32
 msgid "Eduhub"
 msgstr "教育"
